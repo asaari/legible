@@ -1332,8 +1332,6 @@ function closeModal() { document.getElementById('overlay').classList.remove('on'
 function handleOverlay(e) { if (e.target === document.getElementById('overlay')) closeModal(); }
 
 function handleAudit() {
-  const v = document.getElementById('heroUrl').value;
-  if (!v) { document.getElementById('heroUrl').focus(); return; }
   openModal();
 }
 
