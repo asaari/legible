@@ -1,4 +1,4 @@
-json{
+{
   "framework": null,
   "functions": {
     "api/audit.js": {
