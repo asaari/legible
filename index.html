@@ -1344,13 +1344,46 @@ function handleCta() {
   openModal();
 }
 
-function submitModal() {
+async function submitModal() {
   const url = document.getElementById('mUrl').value;
   const email = document.getElementById('mEmail').value;
   if (!url) { document.getElementById('mUrl').focus(); return; }
   if (!email) { document.getElementById('mEmail').focus(); return; }
-  const domain = url.replace(/https?:\/\//, '').split('/')[0];
-  document.getElementById('mContent').innerHTML = `
+
+  const btn = document.querySelector('.m-submit');
+  const original = btn.textContent;
+  btn.textContent = 'Crawling your site…';
+  btn.disabled = true;
+
+  try {
+    const res = await fetch('/api/audit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ url, email })
+    });
+    const data = await res.json();
+
+    if (data.success) {
+      document.getElementById('mContent').innerHTML = `
+        <div class="m-done">
+          <div class="m-tick">${data.grade}</div>
+          <div class="m-done-h">Report sent.</div>
+          <p class="m-done-p">
+            Your Legibility Score: <strong>${data.grade} — ${data.score}/100</strong><br>
+            Full report landing in your inbox now.
+          </p>
+        </div>`;
+    } else {
+      btn.textContent = original;
+      btn.disabled = false;
+      alert(data.error || 'Something went wrong. Please try again.');
+    }
+  } catch (err) {
+    btn.textContent = original;
+    btn.disabled = false;
+    alert('Connection error — please try again.');
+  }
+}
     <div class="m-done">
       <div class="m-tick">✓</div>
       <div class="m-done-h">Audit queued.</div>
