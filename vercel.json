@@ -2,17 +2,5 @@
   "framework": null,
   "buildCommand": "",
   "outputDirectory": ".",
-  "installCommand": "",
-  "functions": {
-    "api/audit.js":              { "maxDuration": 30 },
-    "api/create-checkout.js":    { "maxDuration": 10 },
-    "api/confirm-payment.js":    { "maxDuration": 60 },
-    "api/monitor.js":            { "maxDuration": 300 }
-  },
-  "crons": [
-    {
-      "path": "/api/monitor",
-      "schedule": "0 7 * * 1"
-    }
-  ]
+  "installCommand": ""
 }
