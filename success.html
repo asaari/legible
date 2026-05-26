@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payment confirmed — Legible</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist+Mono:wght@400;500&family=Geist:wght@300;400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#16120e;--surface:#1e1a14;--border:#2e2820;--text:#ede8df;--muted:#8a837a;--dim:#504840;--accent:#e8a23a;--mono:'Geist Mono',monospace;--serif:'Instrument Serif',Georgia,serif;--sans:'Geist',system-ui,sans-serif}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);min-height:100vh;display:flex;align-items:center;justify-content:center;-webkit-font-smoothing:antialiased}
+body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(255,255,255,0.022) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.022) 1px,transparent 1px);background-size:72px 72px;pointer-events:none}
+.card{position:relative;z-index:1;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:48px 40px;text-align:center;max-width:440px;width:100%;margin:24px}
+.mark{font-family:var(--serif);font-size:80px;line-height:1;color:var(--accent);margin-bottom:24px;animation:pop 0.4s cubic-bezier(0.34,1.56,0.64,1) both}
+@keyframes pop{from{transform:scale(0.5);opacity:0}to{transform:scale(1);opacity:1}}
+h1{font-family:var(--serif);font-size:34px;font-weight:400;color:var(--text);margin-bottom:12px;line-height:1.15}
+.sub{font-size:14px;color:var(--muted);font-weight:300;line-height:1.65;margin-bottom:24px}
+.detail{font-family:var(--mono);font-size:12px;color:var(--dim);letter-spacing:0.03em;background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:4px;padding:14px 16px;margin-bottom:28px;text-align:left;line-height:2}
+.status{font-family:var(--mono);font-size:11px;color:var(--muted);margin-bottom:20px;letter-spacing:0.04em;min-height:18px}
+.status.ok{color:#4ade80}
+.status.err{color:var(--accent)}
+.btn{display:inline-block;background:var(--accent);color:var(--bg);font-family:var(--mono);font-size:12px;font-weight:600;letter-spacing:0.07em;text-transform:uppercase;padding:12px 28px;border-radius:3px;text-decoration:none;transition:background 0.15s}
+.btn:hover{background:#d08e2e}
+.logo{font-family:var(--mono);font-size:12px;letter-spacing:0.08em;color:var(--dim);margin-top:28px}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="mark">&#10003;</div>
+  <h1>Payment confirmed.</h1>
+  <p class="sub">Your full Legibility Report and generated llms.txt are being prepared. Check your email in the next few minutes.</p>
+  <div class="detail" id="detail">Preparing your report&hellip;</div>
+  <div class="status" id="status">Sending your report&hellip;</div>
+  <a href="/" class="btn">Back to Legible &rarr;</a>
+  <div class="logo">legible</div>
+</div>
+<script>
+var params  = new URLSearchParams(window.location.search);
+var session = params.get('session_id');
+var plan    = params.get('plan') || 'report';
+
+var details = {
+  report:   '&#10003; Full Legibility Report\n&#10003; All issues with page-level detail\n&#10003; Prioritised fix list\n&#10003; Generated llms.txt file, ready to deploy',
+  standard: '&#10003; Full Legibility Report emailed now\n&#10003; Weekly citation monitoring active\n&#10003; ChatGPT, Claude, Perplexity tracked\n&#10003; First weekly digest: next Monday',
+  pro:      '&#10003; Full Legibility Report emailed now\n&#10003; Weekly citation monitoring active\n&#10003; Competitor watch active\n&#10003; First weekly digest: next Monday'
+};
+document.getElementById('detail').innerHTML = (details[plan] || details.report).replace(/\n/g,'<br>');
+
+if (session) {
+  fetch('/api/confirm-payment?session_id=' + session)
+    .then(function(r){ return r.json(); })
+    .then(function(d){
+      var st = document.getElementById('status');
+      if (d.success) {
+        st.textContent = 'Report sent. Check your inbox.';
+        st.className = 'status ok';
+      } else if (d.already_processed) {
+        st.textContent = 'Already processed — check your inbox.';
+        st.className = 'status ok';
+      } else {
+        st.textContent = 'Report sending — check inbox in a few minutes.';
+        st.className = 'status err';
+      }
+    })
+    .catch(function(){
+      document.getElementById('status').textContent = 'Check your inbox — report should arrive shortly.';
+    });
+}
+</script>
+</body>
+</html>
