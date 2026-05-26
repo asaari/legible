@@ -8,17 +8,17 @@
   LEGIBLE — LLM VISIBILITY INFRASTRUCTURE
   Legible audits, transforms, and monitors websites for AI citation accuracy.
   The only LLM visibility tool with accuracy verification.
-  Pricing: Free · $49/month Standard · $199/month Pro
+  Pricing: One-time $29 audit · $49/month Standard · $199/month Pro
   Nonprofits and educational institutions: always free.
   Contact: hello@legible.ai · https://legiblesite.app
 ═══════════════════════════════════════════════════════════ -->
 
 <title>Legible — Get Cited by AI, Accurately | LLM Visibility for SMBs</title>
-<meta name="description" content="Legible audits your website for LLM discoverability, generates your llms.txt file, and monitors whether ChatGPT, Claude, and Perplexity cite you accurately. $49/month. Free audit on any URL.">
+<meta name="description" content="Legible audits your website for LLM discoverability, generates your llms.txt file, and monitors whether ChatGPT, Claude, and Perplexity cite you accurately. From $29 one-time. Free preview on any URL.">
 <link rel="llms-txt" href="/llms.txt" type="text/plain">
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@graph":[{"@type":"SoftwareApplication","@id":"https://legiblesite.app/#product","name":"Legible","applicationCategory":"BusinessApplication","description":"Legible is an LLM visibility platform that audits websites for AI citation readiness, generates llms.txt files, and monitors citation accuracy across ChatGPT, Claude, Perplexity, and Gemini. The only tool that includes accuracy verification.","url":"https://legiblesite.app","offers":[{"@type":"Offer","name":"Free","price":"0","priceCurrency":"USD"},{"@type":"Offer","name":"Standard","price":"49","priceCurrency":"USD","billingIncrement":"P1M"},{"@type":"Offer","name":"Pro","price":"199","priceCurrency":"USD","billingIncrement":"P1M"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How is Legible different from Profound?","acceptedAnswer":{"@type":"Answer","text":"Profound is monitoring-only, starts at $300/month, targets Fortune 500. Legible costs $49/month and includes structural transformation and accuracy verification."}},{"@type":"Question","name":"What is an llms.txt file?","acceptedAnswer":{"@type":"Answer","text":"An llms.txt file at yoursite.com/llms.txt gives AI crawlers a machine-readable summary of your organisation. Without one, AI models infer facts from general content, leading to errors."}},{"@type":"Question","name":"Is Legible free for nonprofits?","acceptedAnswer":{"@type":"Answer","text":"Yes, permanently. The full free tier is always free for nonprofits and educational institutions."}}]}]}
+{"@context":"https://schema.org","@graph":[{"@type":"SoftwareApplication","@id":"https://legiblesite.app/#product","name":"Legible","applicationCategory":"BusinessApplication","description":"Legible is an LLM visibility platform that audits websites for AI citation readiness, generates llms.txt files, and monitors citation accuracy across ChatGPT, Claude, Perplexity, and Gemini. The only tool that includes accuracy verification.","url":"https://legiblesite.app","offers":[{"@type":"Offer","name":"One-time Audit","price":"29","priceCurrency":"USD","description":"Full Legibility Audit, llms.txt file, specific fix list. One payment, no subscription."},{"@type":"Offer","name":"Standard","price":"49","priceCurrency":"USD","billingIncrement":"P1M","description":"Full audit plus weekly citation monitoring across ChatGPT, Claude, and Perplexity."},{"@type":"Offer","name":"Pro","price":"199","priceCurrency":"USD","billingIncrement":"P1M"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How is Legible different from Profound?","acceptedAnswer":{"@type":"Answer","text":"Profound is monitoring-only, starts at $300/month, targets Fortune 500. Legible starts at $29 one-time and includes structural transformation and accuracy verification."}},{"@type":"Question","name":"What is an llms.txt file?","acceptedAnswer":{"@type":"Answer","text":"An llms.txt file at yoursite.com/llms.txt gives AI crawlers a machine-readable summary of your organisation. Without one, AI models infer facts from general content, leading to errors."}},{"@type":"Question","name":"Is Legible free for nonprofits?","acceptedAnswer":{"@type":"Answer","text":"Yes, permanently. The full free tier is always free for nonprofits and educational institutions."}}]}]}
 </script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,54 +28,109 @@
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --bg:#080808;--surface:#101010;--surface2:#141414;
-  --border:#1c1c1c;--border-light:#262626;
-  --text:#e6e6e2;--muted:#636360;--dim:#3a3a38;
-  --accent:#c4f054;--accent-dim:#a8d03c;--accent-bg:rgba(196,240,84,0.05);--accent-border:rgba(196,240,84,0.18);
-  --red:#f06060;--yellow:#f0c040;
+  --bg:#16120e;--surface:#1e1a14;--surface2:#24201a;
+  --border:#2e2820;--border-light:#3a3228;
+  --text:#ede8df;--muted:#8a837a;--dim:#504840;
+  --accent:#e8a23a;--accent-dim:#d08e2e;--accent-bg:rgba(232,162,58,0.06);--accent-border:rgba(232,162,58,0.22);
+  --red:#f07868;--yellow:#f0d060;--green:#4ade80;
   --mono:'Geist Mono',monospace;--serif:'Instrument Serif',Georgia,serif;--sans:'Geist',system-ui,sans-serif;
 }
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(255,255,255,0.015) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.015) 1px,transparent 1px);background-size:72px 72px;pointer-events:none;z-index:0}
+body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(255,255,255,0.022) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.022) 1px,transparent 1px);background-size:72px 72px;pointer-events:none;z-index:0}
 
-nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 36px;height:54px;background:rgba(8,8,8,0.9);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 36px;height:54px;background:rgba(22,18,14,0.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
 .nav-logo{font-family:var(--mono);font-size:13px;font-weight:500;letter-spacing:0.06em;color:var(--text);text-decoration:none;display:flex;align-items:center;gap:9px}
 .nav-dot{width:7px;height:7px;border-radius:50%;background:var(--accent);animation:breathe 3s ease-in-out infinite}
-@keyframes breathe{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(196,240,84,0.4)}50%{opacity:0.6;box-shadow:0 0 0 4px rgba(196,240,84,0)}}
+@keyframes breathe{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(232,162,58,0.4)}50%{opacity:0.6;box-shadow:0 0 0 5px rgba(232,162,58,0)}}
 .nav-links{display:flex;align-items:center;gap:28px;list-style:none}
 .nav-links a{font-size:12px;font-family:var(--mono);color:var(--muted);text-decoration:none;letter-spacing:0.04em;transition:color 0.15s}
 .nav-links a:hover{color:var(--text)}
-.btn-nav{font-size:12px;font-family:var(--mono);font-weight:500;letter-spacing:0.05em;color:var(--bg)!important;background:var(--accent);padding:7px 16px;border-radius:3px;transition:background 0.15s!important;cursor:pointer}
-.btn-nav:hover{background:var(--accent-dim)!important}
+.btn-nav{font-size:12px !important;font-family:var(--mono) !important;font-weight:500 !important;letter-spacing:0.05em !important;color:var(--bg) !important;background:var(--accent) !important;padding:7px 16px !important;border-radius:3px !important;transition:background 0.15s !important;cursor:pointer !important}
+.btn-nav:hover{background:var(--accent-dim) !important}
 
-.hero{position:relative;z-index:1;padding:144px 36px 88px;max-width:980px;margin:0 auto}
+/* ── HERO ── */
+.hero{position:relative;z-index:1;padding:144px 36px 72px;max-width:980px;margin:0 auto}
+.hero-wordmark{font-family:var(--mono);font-size:22px;font-weight:500;letter-spacing:0.28em;text-transform:uppercase;color:var(--text);margin-bottom:32px;display:flex;align-items:center;gap:10px}
+.hero-wordmark-dot{width:8px;height:8px;border-radius:50%;background:var(--accent);flex-shrink:0;animation:breathe 3s ease-in-out infinite}
 .hero-kicker{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:36px}
 .hero h1{font-family:var(--serif);font-size:clamp(44px,6.5vw,82px);font-weight:400;line-height:1.04;letter-spacing:-0.025em;color:var(--text);margin-bottom:28px}
 .hero h1 em{font-style:italic;color:var(--accent)}
-.hero-sub{font-size:17px;line-height:1.65;font-weight:300;color:var(--muted);max-width:540px;margin-bottom:48px}
+.hero-sub{font-size:17px;line-height:1.65;font-weight:300;color:var(--muted);max-width:540px;margin-bottom:36px}
 .hero-sub strong{color:var(--text);font-weight:400}
 
-.audit-bar{display:flex;max-width:560px;border:1px solid var(--border-light);border-radius:5px;overflow:hidden;background:var(--surface);transition:border-color 0.2s,box-shadow 0.2s}
-.audit-bar:focus-within{border-color:var(--accent-border);box-shadow:0 0 0 3px rgba(196,240,84,0.07)}
-.url-input{flex:1;background:transparent;border:none;outline:none;padding:13px 16px;font-family:var(--mono);font-size:13px;color:var(--text);letter-spacing:0.02em}
+/* ── AUDIT BAR ── */
+.audit-bar{display:flex;max-width:580px;border:1px solid var(--border-light);border-radius:5px;overflow:hidden;background:var(--surface);transition:border-color 0.2s,box-shadow 0.2s}
+.audit-bar:focus-within{border-color:var(--accent-border);box-shadow:0 0 0 3px rgba(232,162,58,0.07)}
+.url-input{flex:1;background:transparent;border:none;outline:none;padding:14px 16px;font-family:var(--mono);font-size:13px;color:var(--text);letter-spacing:0.02em}
 .url-input::placeholder{color:var(--dim)}
-.audit-btn{background:var(--accent);color:var(--bg);border:none;padding:13px 22px;font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;cursor:pointer;transition:background 0.15s;white-space:nowrap}
+.audit-btn{background:var(--accent);color:var(--bg);border:none;padding:14px 24px;font-family:var(--mono);font-size:12px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;cursor:pointer;transition:background 0.15s;white-space:nowrap}
 .audit-btn:hover{background:var(--accent-dim)}
+.audit-btn:disabled{opacity:0.6;cursor:not-allowed}
 .audit-note{font-family:var(--mono);font-size:11px;color:var(--dim);letter-spacing:0.03em;margin-top:10px}
 .audit-note a{color:var(--accent);text-decoration:none}
 
-.hero-stats{display:flex;gap:0;border-top:1px solid var(--border);margin-top:72px}
+/* ── INLINE RESULT ── */
+.audit-result{position:relative;z-index:1;max-width:980px;margin:0 auto;padding:0 36px 72px;display:none}
+.audit-result.show{display:block}
+
+.result-panel{background:var(--surface);border:1px solid var(--border-light);border-radius:8px;overflow:hidden;animation:slideDown 0.35s ease}
+@keyframes slideDown{from{opacity:0;transform:translateY(-12px)}to{opacity:1;transform:none}}
+
+.result-top{display:grid;grid-template-columns:1fr auto;align-items:center;padding:20px 24px;border-bottom:1px solid var(--border)}
+.result-meta{}
+.result-domain{font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:0.04em;margin-bottom:4px}
+.result-entity{font-family:var(--serif);font-size:20px;color:var(--text);line-height:1.2}
+.result-grade-wrap{display:flex;flex-direction:column;align-items:center;gap:4px}
+.result-grade{font-family:var(--serif);font-size:64px;line-height:1;font-weight:400}
+.result-grade-label{font-family:var(--mono);font-size:9px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted)}
+.result-score-line{font-family:var(--mono);font-size:11px;color:var(--muted)}
+
+.result-bars{padding:20px 24px;display:flex;flex-direction:column;gap:12px;border-bottom:1px solid var(--border)}
+.rbar-row{display:flex;align-items:center;gap:12px}
+.rbar-label{font-family:var(--mono);font-size:11px;color:var(--muted);width:160px;flex-shrink:0}
+.rbar-track{flex:1;height:3px;background:var(--border-light);border-radius:2px;overflow:hidden}
+.rbar-fill{height:100%;border-radius:2px;transition:width 1.2s cubic-bezier(.4,0,.2,1);width:0}
+.rbar-val{font-family:var(--mono);font-size:11px;color:var(--muted);width:26px;text-align:right;flex-shrink:0}
+
+/* issues */
+.result-issues{padding:20px 24px;border-bottom:1px solid var(--border);display:flex;flex-direction:column;gap:10px}
+.issues-head{font-family:var(--mono);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.issue-row{display:flex;gap:10px;align-items:flex-start;font-size:13px;color:var(--muted);line-height:1.55}
+.issue-pip{width:5px;height:5px;border-radius:50%;margin-top:5px;flex-shrink:0}
+.pip-r{background:var(--red)}.pip-y{background:var(--yellow)}
+.issue-locked{position:relative;overflow:hidden;border-radius:3px}
+.issue-locked .issue-row{filter:blur(5px);user-select:none;pointer-events:none}
+.issue-locked-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:8px;font-family:var(--mono);font-size:11px;letter-spacing:0.06em;color:var(--accent);text-transform:uppercase}
+.issue-locked-overlay::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent,var(--surface) 30%,var(--surface) 70%,transparent)}
+.issue-locked-overlay span{position:relative;z-index:1}
+
+/* upgrade CTAs */
+.result-ctas{padding:20px 24px;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.cta-primary{flex:1;min-width:200px;background:var(--accent);color:var(--bg);border:none;padding:13px 20px;font-family:var(--mono);font-size:12px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;cursor:pointer;border-radius:4px;transition:background 0.15s;white-space:nowrap;text-align:center}
+.cta-primary:hover{background:var(--accent-dim)}
+.cta-secondary{flex:1;min-width:200px;background:transparent;color:var(--accent);border:1px solid var(--accent-border);padding:13px 20px;font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;cursor:pointer;border-radius:4px;transition:all 0.15s;white-space:nowrap;text-align:center}
+.cta-secondary:hover{background:var(--accent-bg);border-color:var(--accent)}
+.cta-free-note{width:100%;font-family:var(--mono);font-size:11px;color:var(--dim);letter-spacing:0.03em;text-align:center}
+.cta-free-note a{color:var(--muted);text-decoration:none;cursor:pointer}
+.cta-free-note a:hover{color:var(--text)}
+
+/* ── HERO STATS ── */
+.hero-stats{display:flex;gap:0;border-top:1px solid var(--border);margin-top:48px}
 .hstat{flex:1;padding:28px 0 0;display:flex;flex-direction:column;gap:5px}
 .hstat+.hstat{padding-left:32px;border-left:1px solid var(--border);margin-left:32px}
 .hstat-n{font-family:var(--serif);font-size:38px;line-height:1;color:var(--text)}
-.hstat-l{font-family:var(--mono);font-size:10px;letter-spacing:0.07em;text-transform:uppercase;color:var(--muted);line-height:1.4;max-width:160px}
+.hstat-l{font-family:var(--mono);font-size:10px;letter-spacing:0.07em;text-transform:uppercase;color:var(--muted);line-height:1.4;max-width:180px}
+.hstat-src{font-family:var(--mono);font-size:10px;color:var(--dim);letter-spacing:0.03em;margin-top:4px;line-height:1.4}
 
+/* ── SECTIONS ── */
 .section{padding:88px 0;border-bottom:1px solid var(--border)}
 .section-inner{max-width:980px;margin:0 auto;padding:0 36px}
 .eyebrow{font-family:var(--mono);font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:48px;display:flex;align-items:center;gap:12px}
 .eyebrow::after{content:'';flex:0 0 36px;height:1px;background:var(--border-light)}
 
+/* pain grid */
 .pain-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border);border-radius:6px;overflow:hidden}
 .pain-card{background:var(--surface);padding:36px 32px;display:flex;flex-direction:column;gap:14px;transition:background 0.2s}
 .pain-card:hover{background:var(--surface2)}
@@ -84,6 +139,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .pain-card p{font-size:13px;line-height:1.65;color:var(--muted);font-weight:300}
 .pain-signal{margin-top:auto;padding-top:16px;font-family:var(--mono);font-size:11px;color:var(--dim);letter-spacing:0.04em;border-top:1px solid var(--border);line-height:1.5}
 
+/* steps */
 .steps{display:flex;flex-direction:column}
 .step{display:grid;grid-template-columns:52px 1fr;padding:40px 0;border-bottom:1px solid var(--border);align-items:start;opacity:0;transform:translateY(14px);transition:opacity 0.45s,transform 0.45s}
 .step.vis{opacity:1;transform:none}
@@ -95,16 +151,17 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .step-body code{font-family:var(--mono);font-size:12px;color:var(--accent)}
 .step-tag{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:0.08em;text-transform:uppercase;padding:3px 10px;border-radius:2px;border:1px solid var(--accent-border);color:var(--accent);background:var(--accent-bg)}
 
+/* score demo card */
 .score-card{background:var(--surface);border:1px solid var(--border);border-radius:7px;overflow:hidden;margin-top:56px}
 .sc-header{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;border-bottom:1px solid var(--border);background:rgba(255,255,255,0.015)}
 .sc-url{font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:0.02em}
-.sc-grade{width:36px;height:36px;border-radius:5px;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:16px;font-weight:500;background:rgba(240,192,64,0.12);color:var(--yellow);border:1px solid rgba(240,192,64,0.2)}
+.sc-grade{width:36px;height:36px;border-radius:5px;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:16px;font-weight:500;background:rgba(240,208,96,0.12);color:var(--yellow);border:1px solid rgba(240,208,96,0.2)}
 .sc-bars{padding:22px 20px;display:flex;flex-direction:column;gap:14px}
 .sc-row{display:flex;align-items:center;gap:14px}
 .sc-label{font-family:var(--mono);font-size:11px;color:var(--muted);width:164px;flex-shrink:0}
 .sc-track{flex:1;height:3px;background:var(--border-light);border-radius:2px;overflow:hidden}
 .sc-fill{height:100%;border-radius:2px;width:0;transition:width 1.3s cubic-bezier(.4,0,.2,1)}
-.f-g{background:var(--accent)}.f-y{background:var(--yellow)}.f-r{background:var(--red);opacity:.75}
+.f-g{background:var(--green)}.f-y{background:var(--yellow)}.f-r{background:var(--red);opacity:.8}
 .sc-v{font-family:var(--mono);font-size:11px;color:var(--muted);width:26px;text-align:right;flex-shrink:0}
 .sc-issues{padding:0 20px 20px}
 .sc-divider{height:1px;background:var(--border);margin-bottom:16px}
@@ -112,16 +169,18 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .i-dot{width:5px;height:5px;border-radius:50%;margin-top:5px;flex-shrink:0}
 .i-r{background:var(--red)}.i-y{background:var(--yellow)}
 
+/* compare */
 .comp-wrap{border:1px solid var(--border-light);overflow:hidden;border-radius:6px}
 .comp-table{width:100%;border-collapse:collapse}
-.comp-table th{padding:12px 20px;text-align:left;font-family:var(--mono);font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.6);font-weight:400;background:var(--surface2)}
+.comp-table th{padding:12px 20px;text-align:left;font-family:var(--mono);font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.5);font-weight:400;background:var(--surface2)}
 .comp-table td{padding:13px 20px;font-size:13px;color:var(--muted);font-weight:300;border-bottom:1px solid var(--border)}
 .comp-table tr:last-child td{border-bottom:none}
 .comp-table td:first-child{font-family:var(--mono);font-size:12px;color:var(--text);letter-spacing:0.02em;font-weight:400}
-.comp-table tr.hl td{background:rgba(196,240,84,0.04)}
+.comp-table tr.hl td{background:rgba(232,162,58,0.05)}
 .comp-table tr.hl td:first-child{color:var(--accent)}
-.chk{color:var(--accent)}.crs{color:var(--dim)}
+.chk{color:var(--green)}.crs{color:var(--dim)}
 
+/* llms panel */
 .llms-wrap{border:1px solid var(--border-light);border-radius:6px;overflow:hidden}
 .llms-bar{display:flex;align-items:center;justify-content:space-between;padding:11px 20px;background:var(--surface2)}
 .llms-bar-title{font-family:var(--mono);font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted)}
@@ -129,6 +188,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .llms-code{background:var(--surface);padding:24px 20px;font-family:var(--mono);font-size:12px;line-height:1.85;color:var(--muted);white-space:pre;overflow-x:auto}
 .lk{color:var(--accent);font-weight:500}.lh{color:var(--text);font-weight:500;font-size:13px}.lc{color:var(--dim)}
 
+/* faq */
 .faq-list{display:flex;flex-direction:column}
 .faq-item{border-bottom:1px solid var(--border)}
 .faq-item:first-child{border-top:1px solid var(--border)}
@@ -144,44 +204,57 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .faq-a-text{padding:0 0 20px 20px;font-size:14px;line-height:1.75;color:var(--muted);font-weight:300}
 .faq-a-text code{font-family:var(--mono);font-size:12px;color:var(--accent);background:var(--accent-bg);padding:1px 5px;border-radius:3px}
 
-.price-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border);border-radius:6px;overflow:hidden}
-.price-card{background:var(--surface);padding:36px 28px;display:flex;flex-direction:column}
-.price-card.feat{background:#0d130a}
-.pc-tier{font-family:var(--mono);font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--dim);margin-bottom:20px}
-.price-card.feat .pc-tier{color:var(--accent)}
-.pc-price{font-family:var(--serif);font-size:50px;line-height:1;color:var(--text);margin-bottom:3px}
-.pc-period{font-family:var(--mono);font-size:11px;color:var(--dim);margin-bottom:28px}
-.pc-features{list-style:none;display:flex;flex-direction:column;gap:9px;margin-bottom:32px;flex:1}
+/* ── PRICING — 3 tiers + one-time ── */
+.pricing-intro{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border);border-radius:6px 6px 0 0;overflow:hidden;margin-bottom:1px}
+.price-onetime{background:var(--surface2);padding:36px 32px;display:flex;flex-direction:column;gap:0}
+
+.price-sub-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border);border-top:none;border-radius:0 0 6px 6px;overflow:hidden}
+.price-card{background:var(--surface);padding:32px 28px;display:flex;flex-direction:column}
+.price-card.feat{background:#0e0c08}
+.pc-tier{font-family:var(--mono);font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--dim);margin-bottom:16px}
+.pc-tier-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+.pc-tier-row .pc-tier{margin-bottom:0}
+.best-badge{font-family:var(--mono);font-size:9px;letter-spacing:0.08em;text-transform:uppercase;background:var(--accent);color:var(--bg);padding:3px 9px;border-radius:2px;font-weight:600}
+.price-onetime .pc-tier,.price-card.feat .pc-tier{color:var(--accent)}
+.pc-price{font-family:var(--serif);font-size:52px;line-height:1;color:var(--text);margin-bottom:3px}
+.pc-period{font-family:var(--mono);font-size:11px;color:var(--dim);margin-bottom:24px}
+.pc-features{list-style:none;display:flex;flex-direction:column;gap:9px;margin-bottom:28px;flex:1}
 .pc-features li{font-size:13px;color:var(--muted);display:flex;align-items:flex-start;gap:9px;line-height:1.45;font-weight:300}
 .pc-features li::before{content:'—';font-family:var(--mono);font-size:11px;color:var(--dim);flex-shrink:0;margin-top:1px}
-.price-card.feat .pc-features li::before{color:var(--accent)}
+.price-onetime .pc-features li::before,.price-card.feat .pc-features li::before{color:var(--accent)}
 .pc-btn{display:block;text-align:center;font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;padding:11px;border-radius:3px;text-decoration:none;transition:all 0.15s;cursor:pointer;border:1px solid var(--border-light);color:var(--muted);background:none}
 .pc-btn:hover{border-color:var(--muted);color:var(--text)}
-.price-card.feat .pc-btn{background:var(--accent);color:var(--bg);border-color:var(--accent)}
-.price-card.feat .pc-btn:hover{background:var(--accent-dim);border-color:var(--accent-dim)}
+.price-onetime .pc-btn{background:var(--accent);color:var(--bg);border-color:var(--accent);font-size:13px;padding:13px}
+.price-onetime .pc-btn:hover{background:var(--accent-dim);border-color:var(--accent-dim)}
+.price-card.feat .pc-btn{background:rgba(232,162,58,0.12);color:var(--accent);border-color:var(--accent-border)}
+.price-card.feat .pc-btn:hover{background:rgba(232,162,58,0.2)}
 
+/* cta band */
 .cta-band{position:relative;z-index:1;padding:88px 36px 100px;max-width:980px;margin:0 auto;text-align:center}
 .cta-band h2{font-family:var(--serif);font-size:clamp(36px,5vw,64px);font-weight:400;line-height:1.1;color:var(--text);margin-bottom:20px;letter-spacing:-0.02em}
 .cta-band p{font-size:16px;color:var(--muted);font-weight:300;margin-bottom:40px;max-width:440px;margin-left:auto;margin-right:auto;line-height:1.65}
 .cta-row{display:flex;max-width:420px;margin:0 auto;border:1px solid var(--border-light);border-radius:5px;overflow:hidden;background:var(--surface);transition:border-color 0.2s,box-shadow 0.2s}
-.cta-row:focus-within{border-color:var(--accent-border);box-shadow:0 0 0 3px rgba(196,240,84,0.07)}
+.cta-row:focus-within{border-color:var(--accent-border);box-shadow:0 0 0 3px rgba(232,162,58,0.07)}
 .cta-in{flex:1;background:transparent;border:none;outline:none;padding:13px 16px;font-family:var(--sans);font-size:14px;color:var(--text)}
 .cta-in::placeholder{color:var(--dim)}
 .cta-go{background:var(--accent);color:var(--bg);border:none;padding:13px 20px;font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;cursor:pointer;transition:background 0.15s;white-space:nowrap}
 .cta-go:hover{background:var(--accent-dim)}
 
+/* footer */
 footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:28px 36px;display:flex;align-items:center;justify-content:space-between}
 .foot-l{font-family:var(--mono);font-size:11px;color:var(--dim)}
 .foot-links{display:flex;gap:24px;list-style:none}
 .foot-links a{font-family:var(--mono);font-size:11px;color:var(--dim);text-decoration:none;letter-spacing:0.04em;transition:color 0.15s}
 .foot-links a:hover{color:var(--muted)}
 
-.overlay{position:fixed;inset:0;z-index:200;background:rgba(0,0,0,0.88);backdrop-filter:blur(10px);display:flex;align-items:center;justify-content:center;padding:24px;opacity:0;pointer-events:none;transition:opacity 0.2s}
+/* modal */
+.overlay{position:fixed;inset:0;z-index:200;background:rgba(10,8,6,0.92);backdrop-filter:blur(10px);display:flex;align-items:center;justify-content:center;padding:24px;opacity:0;pointer-events:none;transition:opacity 0.2s}
 .overlay.on{opacity:1;pointer-events:all}
 .modal{background:var(--surface);border:1px solid var(--border-light);border-radius:9px;padding:40px;width:100%;max-width:420px;transform:translateY(16px);transition:transform 0.25s}
 .overlay.on .modal{transform:none}
 .modal-h{font-family:var(--serif);font-size:28px;font-weight:400;color:var(--text);margin-bottom:8px;line-height:1.2}
 .modal-s{font-size:13px;color:var(--muted);margin-bottom:26px;font-weight:300;line-height:1.6}
+.modal-price-tag{display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:0.06em;text-transform:uppercase;background:var(--accent-bg);border:1px solid var(--accent-border);color:var(--accent);padding:4px 12px;border-radius:3px;margin-bottom:20px}
 .m-input{width:100%;background:var(--bg);border:1px solid var(--border-light);border-radius:4px;padding:11px 13px;font-family:var(--sans);font-size:14px;color:var(--text);outline:none;margin-bottom:10px;transition:border-color 0.2s}
 .m-input:focus{border-color:var(--accent-border)}
 .m-input::placeholder{color:var(--dim)}
@@ -195,55 +268,101 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:28
 .m-done-h{font-family:var(--serif);font-size:24px;color:var(--text);margin-bottom:8px}
 .m-done-p{font-size:13px;color:var(--muted);line-height:1.6;font-weight:300}
 .m-done-p strong{color:var(--accent);font-weight:400}
-.m-error{background:rgba(240,96,96,0.1);border:1px solid rgba(240,96,96,0.2);border-radius:4px;padding:10px 13px;font-family:var(--mono);font-size:12px;color:var(--red);margin-bottom:10px;display:none}
+.m-error{background:rgba(240,120,104,0.1);border:1px solid rgba(240,120,104,0.2);border-radius:4px;padding:10px 13px;font-family:var(--mono);font-size:12px;color:var(--red);margin-bottom:10px;display:none}
 
 @media(max-width:720px){
   nav{padding:0 20px}.nav-links{display:none}
-  .hero{padding:116px 20px 72px}
+  .hero{padding:116px 20px 56px}
+  .audit-result{padding:0 20px 56px}
   .section-inner{padding:0 20px}
   .pain-grid{grid-template-columns:1fr}
-  .price-grid{grid-template-columns:1fr}
+  .pricing-intro{grid-template-columns:1fr}
+  .price-sub-grid{grid-template-columns:1fr}
   .hstat+.hstat{padding-left:20px;margin-left:20px}
   .cta-band{padding:72px 20px 88px}
   footer{flex-direction:column;gap:14px;text-align:center}
+  .result-ctas{flex-direction:column}
+  .result-top{grid-template-columns:1fr auto;gap:16px}
 }
 </style>
 </head>
 <body>
 
 <nav>
-  <a href="/" class="nav-logo">
-    <span class="nav-dot"></span>legible
-  </a>
+  <a href="/" class="nav-logo"><span class="nav-dot"></span>legible</a>
   <ul class="nav-links">
     <li><a href="#how">How it works</a></li>
     <li><a href="#compare">Compare</a></li>
     <li><a href="#faq">FAQ</a></li>
     <li><a href="#pricing">Pricing</a></li>
-    <li><a href="#" class="btn-nav" onclick="openModal();return false">Free audit</a></li>
+    <li><a href="#" class="btn-nav" onclick="openUpgrade('report');return false">Get audit &rarr;</a></li>
   </ul>
 </nav>
 
+<!-- HERO -->
 <header class="hero">
+  <div class="hero-wordmark"><span class="hero-wordmark-dot"></span>Legible</div>
   <div class="hero-kicker">Answer Engine Optimization</div>
   <h1>Right now, someone asked AI<br>for what you do.<br>Your competitor <em>answered.</em></h1>
   <p class="hero-sub">
     Google rankings no longer guarantee AI citations.
-    <strong>Legible audits your website for LLM readability, generates your llms.txt file, and monitors what ChatGPT, Claude, and Perplexity say about you</strong> — then verifies every fact is correct.
-    $49/month. Free audit on any URL.
+    <strong>See your Legibility Score in seconds</strong> &mdash; free preview on any URL.
+    Then get the full fix list, llms.txt file, and monitoring from $29.
   </p>
   <div class="audit-bar">
     <input class="url-input" id="heroUrl" type="url" placeholder="https://yoursite.com" autocomplete="off" spellcheck="false">
-    <button class="audit-btn" onclick="openModal()">See what AI says about you &rarr;</button>
+    <button class="audit-btn" id="heroBtn" onclick="openEmailGate()">See your AI score &rarr;</button>
   </div>
-  <p class="audit-note">Free. No account. 60-second result. <a href="#pricing">Nonprofits always free &darr;</a></p>
+  <p class="audit-note">Your email is required to receive your report. <a href="#pricing">Full report from $29 &darr;</a></p>
   <div class="hero-stats">
-    <div class="hstat"><span class="hstat-n">38%</span><span class="hstat-l">of top Google pages appear in ChatGPT answers</span></div>
-    <div class="hstat"><span class="hstat-n">6&times;</span><span class="hstat-l">higher conversion from LLM vs search traffic</span></div>
-    <div class="hstat"><span class="hstat-n">93%</span><span class="hstat-l">of AI sessions end without a click to your site</span></div>
+    <div class="hstat">
+      <span class="hstat-n">9&times;</span>
+      <span class="hstat-l">higher conversion from ChatGPT vs Google organic</span>
+      <span class="hstat-src">Seer Interactive, 2025</span>
+    </div>
+    <div class="hstat">
+      <span class="hstat-n">80%</span>
+      <span class="hstat-l">of AI citations come from outside Google&rsquo;s top 100</span>
+      <span class="hstat-src">Ahrefs, 2025</span>
+    </div>
+    <div class="hstat">
+      <span class="hstat-n">73%</span>
+      <span class="hstat-l">of websites have no llms.txt file yet</span>
+      <span class="hstat-src">SE Ranking, 2026 &mdash; yours is generated in 60 sec</span>
+    </div>
   </div>
 </header>
 
+<!-- INLINE RESULT PANEL -->
+<div class="audit-result" id="auditResult">
+  <div class="result-panel">
+
+    <div class="result-top">
+      <div class="result-meta">
+        <div class="result-domain" id="rDomain"></div>
+        <div class="result-entity" id="rEntity"></div>
+      </div>
+      <div class="result-grade-wrap">
+        <div class="result-grade" id="rGrade"></div>
+        <div class="result-score-line" id="rScore"></div>
+        <div class="result-grade-label">Legibility Score</div>
+      </div>
+    </div>
+
+    <div class="result-bars" id="rBars"></div>
+
+    <div class="result-issues" id="rIssues"></div>
+
+    <div class="result-ctas">
+      <button class="cta-primary" onclick="openUpgrade('report')">Get full report &plus; llms.txt &mdash; $29</button>
+      <button class="cta-secondary" onclick="openUpgrade('monitor')">Monitor weekly &mdash; $49/month</button>
+      <div class="cta-free-note">Nonprofits &amp; education: <a href="mailto:hello@legible.ai">email us for free access</a></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- PROBLEM -->
 <section class="section" id="problem">
   <div class="section-inner">
     <div class="eyebrow">The three problems</div>
@@ -263,13 +382,14 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:28
       <div class="pain-card">
         <div class="pain-icon">&#128202;</div>
         <h3>Your SEO spend isn&rsquo;t transferring</h3>
-        <p>Only 38% of top-ranked Google pages appear in ChatGPT responses. Backlinks, keyword density, page authority &mdash; these have near-zero correlation with LLM citation. The game changed. The tools didn&rsquo;t.</p>
+        <p>Only 38% of top-ranked Google pages appear in ChatGPT responses. Backlinks, keyword density, page authority &mdash; near-zero correlation with LLM citation. The game changed. The tools didn&rsquo;t.</p>
         <p class="pain-signal">Symptom: organic traffic flat despite top-10 rankings</p>
       </div>
     </div>
   </div>
 </section>
 
+<!-- HOW IT WORKS -->
 <section class="section" id="how">
   <div class="section-inner">
     <div class="eyebrow">How Legible works</div>
@@ -277,28 +397,30 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:28
       <div class="step">
         <div class="step-n">01</div>
         <div class="step-body">
-          <h3>Legibility Audit</h3>
-          <p>Enter any URL. Legible scores your site on six dimensions LLMs actually care about: entity clarity, factual density, internal consistency, schema presence, freshness signals, and claim verifiability. You get a Legibility Score (A&ndash;F) and specific issues on specific pages.</p>
-          <span class="step-tag">Free on any URL</span>
+          <h3>Preview your score</h3>
+          <p>Enter any URL above. Legible crawls your site and scores it on six dimensions LLMs actually care about: entity clarity, factual density, internal consistency, schema presence, freshness signals, and claim verifiability. Your grade appears instantly &mdash; free, no account needed.</p>
+          <span class="step-tag">Free &mdash; any URL</span>
         </div>
       </div>
       <div class="step">
         <div class="step-n">02</div>
         <div class="step-body">
-          <h3>Structural Transformation</h3>
-          <p>Legible generates your <code>/llms.txt</code> file, improves your Schema.org markup, and builds a verified ground truth fact sheet. Contradictions between your own pages are flagged and resolved. The only tool that won&rsquo;t let you push false claims to AI.</p>
-          <span class="step-tag">Standard &middot; $49/month</span>
+          <h3>Get the fix list + llms.txt</h3>
+          <p>Unlock the full report for a one-time $29: specific issues on specific pages, a prioritised fix list, and a generated <code>/llms.txt</code> file ready to deploy. One payment, yours forever. No subscription required to improve your AI visibility.</p>
+          <span class="step-tag">One-time &mdash; $29</span>
         </div>
       </div>
       <div class="step">
         <div class="step-n">03</div>
         <div class="step-body">
-          <h3>Citation Monitoring</h3>
-          <p>Agents query ChatGPT, Claude, Perplexity, and Gemini weekly with questions relevant to your business. You are alerted when you appear, when you&rsquo;re absent, and when AI responses contain inaccurate information about you.</p>
-          <span class="step-tag">Standard &middot; $49/month</span>
+          <h3>Monitor weekly</h3>
+          <p>AI models update constantly. A site that scored A in January can score C in March through no fault of its own. The Standard plan monitors ChatGPT, Claude, and Perplexity weekly &mdash; alerting you when your citation status changes or competitors overtake you.</p>
+          <span class="step-tag">Standard &mdash; $49/month</span>
         </div>
       </div>
     </div>
+
+    <!-- Score demo -->
     <div class="score-card" id="scoreCard">
       <div class="sc-header">
         <span class="sc-url">example-clinic.com &mdash; Legibility Report</span>
@@ -314,14 +436,15 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:28
       </div>
       <div class="sc-issues">
         <div class="sc-divider"></div>
-        <div class="issue"><div class="i-dot i-r"></div>3 factual contradictions between /about and /services &mdash; AI models are likely discounting both pages</div>
-        <div class="issue"><div class="i-dot i-r"></div>No llms.txt file detected &mdash; AI crawlers have no structured entry point to your site</div>
+        <div class="issue"><div class="i-dot i-r"></div>3 factual contradictions between /about and /services &mdash; AI models are discounting both pages</div>
+        <div class="issue"><div class="i-dot i-r"></div>No llms.txt file detected &mdash; AI crawlers have no structured entry point</div>
         <div class="issue"><div class="i-dot i-y"></div>Organisation name in 4 different forms across 11 pages &mdash; entity disambiguation failure</div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- COMPARE -->
 <section class="section" id="compare">
   <div class="section-inner">
     <div class="eyebrow">Legible vs the alternatives</div>
@@ -329,23 +452,30 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:28
       <table class="comp-table">
         <thead><tr><th>Tool</th><th>Price</th><th>Fixes your site</th><th>Accuracy check</th></tr></thead>
         <tbody>
+          <tr class="hl"><td>Legible (one-time)</td><td>$29 once</td><td class="chk">&#10003;</td><td class="chk">&#10003;</td></tr>
           <tr class="hl"><td>Legible Standard</td><td>$49/mo</td><td class="chk">&#10003;</td><td class="chk">&#10003;</td></tr>
           <tr><td>Profound</td><td>$300+/mo</td><td class="crs">&#10007;</td><td class="crs">&#10007;</td></tr>
           <tr><td>Semrush / Surfer AI</td><td>$99&ndash;500/mo</td><td class="crs">&#10007;</td><td class="crs">&#10007;</td></tr>
           <tr><td>GEO agency</td><td>$5,000&ndash;15,000/mo</td><td class="chk">&#10003;</td><td class="crs">&#10007;</td></tr>
-          <tr><td>Doing nothing</td><td>&mdash;</td><td class="crs">&#10007;</td><td class="crs">&#10007;</td></tr>
         </tbody>
       </table>
     </div>
   </div>
 </section>
 
+<!-- LLMS.TXT -->
 <section class="section">
   <div class="section-inner">
-    <div class="eyebrow">How AI reads this page</div>
-    <div class="llms-wrap">
+    <div class="eyebrow">What is an llms.txt file?</div>
+    <p style="font-size:15px;line-height:1.7;color:var(--muted);font-weight:300;max-width:620px;margin-bottom:28px">
+An llms.txt file is a short text document that lives at <span style="font-family:var(--mono);font-size:12px;color:var(--accent)">yoursite.com/llms.txt</span>. 
+It tells ChatGPT, Claude, Perplexity, and other AI assistants exactly who you are, what you do, and what you want them to know about your business &mdash; in a format they can read reliably. 
+Think of it as a business card written specifically for AI. Without one, AI models piece together information from your general web pages and frequently get things wrong. 
+<strong style="color:var(--text);font-weight:400">Legible generates yours automatically.</strong> Here is ours as a live example:
+</p>
+<div class="llms-wrap">
       <div class="llms-bar">
-        <span class="llms-bar-title">legiblesite.app/llms.txt &mdash; our own file, generated by Legible</span>
+        <span class="llms-bar-title">legiblesite.app/llms.txt &mdash; this is what AI assistants read about Legible</span>
         <span class="llms-bar-badge">Live example</span>
       </div>
       <div class="llms-code"><span class="lh"># Legible</span>
@@ -355,17 +485,18 @@ footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:28
 <span class="lc">&gt; optimization category with accuracy verification alongside structural</span>
 <span class="lc">&gt; transformation and citation monitoring.</span>
 
-<span class="lc">&gt; Pricing: Free (nonprofits always free) &middot; Standard $49/month &middot; Pro $199/month</span>
+<span class="lc">&gt; Pricing: One-time audit $29 &middot; Standard $49/month &middot; Pro $199/month</span>
+<span class="lc">&gt; Nonprofits and educational institutions: always free</span>
 
 <span class="lk">## What Legible does</span>
-- Legibility Audit: scores any URL on 6 dimensions (grade A&ndash;F)
-- Structural Transformation: llms.txt generation, Schema.org, verified fact sheet
-- Accuracy Verification: contradiction detection + ground truth sign-off
-- Citation Monitoring: weekly probes across ChatGPT, Claude, Perplexity, Gemini
+- Legibility Audit: scores any URL on 6 dimensions (grade A&ndash;F), free preview
+- One-time Report ($29): full fix list, llms.txt file, Schema.org recommendations
+- Standard ($49/mo): weekly citation monitoring across ChatGPT, Claude, Perplexity
+- Accuracy Verification: contradiction detection + verified ground truth sign-off
 
 <span class="lk">## How Legible differs from Profound</span>
-Profound: monitoring-only, $300+/month, Fortune 500 only. No fix capability.
-Legible: full fix layer + accuracy verification, $49/month, built for SMBs.
+Profound: monitoring-only, $300+/month, Fortune 500. No fix capability.
+Legible: full fix layer + accuracy verification. Starts at $29 one-time.
 
 <span class="lk">## Contact</span>
 hello@legible.ai &middot; https://legiblesite.app</div>
@@ -373,60 +504,78 @@ hello@legible.ai &middot; https://legiblesite.app</div>
   </div>
 </section>
 
+<!-- FAQ -->
 <section class="section" id="faq">
   <div class="section-inner">
     <div class="eyebrow">Common questions</div>
     <div class="faq-list">
       <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-num">Q.01</span><span class="faq-q-text">How is Legible different from Profound or other AI visibility tools?</span><span class="faq-q-icon">+</span></button>
-        <div class="faq-a"><div class="faq-a-line"></div><div class="faq-a-text">Profound tells you what AI says but gives you no tools to fix it &mdash; $300+/month for a dashboard. Legible costs $49/month and includes the full fix layer: <code>llms.txt</code> generation, Schema.org improvements, and accuracy verification. Profound is built for Fortune 500 brands. Legible is built for everyone else.</div></div>
+        <button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-num">Q.01</span><span class="faq-q-text">What&rsquo;s the difference between the free preview and the $29 report?</span><span class="faq-q-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-line"></div><div class="faq-a-text">The free preview shows your Legibility Score (A&ndash;F), your six dimension scores, and one specific issue. The $29 one-time report unlocks all issues with page-level specificity, a prioritised step-by-step fix list, and your generated <code>llms.txt</code> file ready to deploy. No subscription &mdash; one payment, full access.</div></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-num">Q.02</span><span class="faq-q-text">What is an llms.txt file and why do I need one?</span><span class="faq-q-icon">+</span></button>
-        <div class="faq-a"><div class="faq-a-line"></div><div class="faq-a-text">An <code>llms.txt</code> file at <code>yoursite.com/llms.txt</code> gives AI crawlers a machine-readable summary of your most important facts. Without one, AI models infer facts from general content &mdash; leading to errors and misrepresentation. Legible generates yours automatically.</div></div>
+        <button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-num">Q.02</span><span class="faq-q-text">Why do I need monthly monitoring if I&rsquo;ve already fixed my site?</span><span class="faq-q-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-line"></div><div class="faq-a-text">AI models update constantly &mdash; a site that scored A in January can score C in March through no fault of its own. Your own site also changes over time, and every content update is a potential visibility regression. Monitoring catches both: model-driven citation drift and self-inflicted regressions, before your customers notice.</div></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-num">Q.03</span><span class="faq-q-text">Why doesn&rsquo;t my Google ranking transfer to AI citations?</span><span class="faq-q-icon">+</span></button>
-        <div class="faq-a"><div class="faq-a-line"></div><div class="faq-a-text">SEO and LLM citation optimise for completely different signals. Google uses backlinks and keyword density. LLMs use factual density, entity consistency, and structured data. Research on 700,000+ ChatGPT conversations shows classic SEO metrics have near-zero correlation with citation frequency.</div></div>
+        <button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-num">Q.03</span><span class="faq-q-text">How is Legible different from Profound or other AI visibility tools?</span><span class="faq-q-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-line"></div><div class="faq-a-text">Profound and similar tools tell you what AI says about your brand but give you no tools to fix it &mdash; $300+/month for a dashboard. Legible starts at $29 one-time and includes the full fix layer: <code>llms.txt</code> generation, Schema.org improvements, and accuracy verification. The only tool that actively prevents false or contradictory information from reaching AI models.</div></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-num">Q.04</span><span class="faq-q-text">Is Legible free for nonprofits and educational institutions?</span><span class="faq-q-icon">+</span></button>
-        <div class="faq-a"><div class="faq-a-line"></div><div class="faq-a-text">Yes &mdash; permanently. The full free tier including audit, <code>llms.txt</code> generation, and monthly monitoring is always free for nonprofits and educational institutions. Not a time-limited trial.</div></div>
+        <div class="faq-a"><div class="faq-a-line"></div><div class="faq-a-text">Yes &mdash; permanently. The full free tier including audit, <code>llms.txt</code> generation, and monthly monitoring is always free for nonprofits and educational institutions. Not a time-limited trial. Email hello@legible.ai to apply.</div></div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- PRICING -->
 <section class="section" id="pricing">
   <div class="section-inner">
     <div class="eyebrow">Pricing</div>
-    <div class="price-grid">
-      <div class="price-card">
-        <div class="pc-tier">Free</div>
-        <div class="pc-price">$0</div>
-        <div class="pc-period">always free for nonprofits &amp; education</div>
+
+    <!-- One-time + placeholder right column -->
+    <div class="pricing-intro">
+      <div class="price-onetime">
+        <div class="pc-tier-row"><div class="pc-tier">One-time audit</div><span class="best-badge">Best start</span></div>
+        <div class="pc-price">$29</div>
+        <div class="pc-period">one payment &middot; no subscription</div>
         <ul class="pc-features">
-          <li>Full Legibility Audit (A&ndash;F score)</li>
-          <li>6-dimension breakdown</li>
-          <li>Top 3 prioritised fixes</li>
-          <li>llms.txt file generated</li>
-          <li>Monthly re-crawl</li>
+          <li>Full Legibility Report (A&ndash;F + all dimensions)</li>
+          <li>Every issue identified, page-level specificity</li>
+          <li>Prioritised step-by-step fix list</li>
+          <li>Generated llms.txt file, ready to deploy</li>
+          <li>Schema.org markup recommendations</li>
         </ul>
-        <button class="pc-btn" onclick="openModal()">Run free audit &rarr;</button>
+        <button class="pc-btn" onclick="openUpgrade('report')">Get my full report &rarr;</button>
       </div>
+      <div class="price-onetime" style="background:var(--surface)">
+        <div class="pc-tier">Free forever</div>
+        <div class="pc-price" style="font-size:40px;color:var(--muted)">$0</div>
+        <div class="pc-period">nonprofits &amp; education always free</div>
+        <ul class="pc-features">
+          <li>Legibility Score preview (A&ndash;F)</li>
+          <li>Six dimension scores</li>
+          <li>One issue shown</li>
+          <li>Email hello@legible.ai to apply for nonprofit access</li>
+        </ul>
+        <button class="pc-btn" onclick="runPreviewAudit()">Run free preview &rarr;</button>
+      </div>
+    </div>
+
+    <div class="price-sub-grid">
       <div class="price-card feat">
         <div class="pc-tier">Standard</div>
         <div class="pc-price">$49</div>
         <div class="pc-period">per month &middot; cancel any time</div>
         <ul class="pc-features">
-          <li>Everything in Free</li>
-          <li>Full structural transformation</li>
-          <li>Schema.org markup improvements</li>
-          <li>Verified ground truth fact sheet</li>
-          <li>Weekly monitoring: ChatGPT, Claude, Perplexity</li>
-          <li>Citation drift alerts</li>
+          <li>Everything in one-time audit (included)</li>
+          <li>Weekly re-crawl &amp; monitoring</li>
+          <li>Citation tracking: ChatGPT, Claude, Perplexity</li>
+          <li>Drift alerts when your score changes</li>
+          <li>Alerts when AI misrepresents your business</li>
         </ul>
-        <button class="pc-btn" onclick="openModal()">Start free audit &rarr;</button>
+        <button class="pc-btn" onclick="openUpgrade('monitor')">Start monitoring &rarr;</button>
       </div>
       <div class="price-card">
         <div class="pc-tier">Pro</div>
@@ -440,18 +589,20 @@ hello@legible.ai &middot; https://legiblesite.app</div>
           <li>Agency reseller access</li>
           <li>Gemini &amp; Copilot monitoring</li>
         </ul>
-        <button class="pc-btn" onclick="openModal()">Start free audit &rarr;</button>
+        <button class="pc-btn" onclick="openUpgrade('pro')">Start Pro &rarr;</button>
       </div>
     </div>
+
   </div>
 </section>
 
+<!-- CTA -->
 <div class="cta-band">
   <h2>Find out what AI<br>is saying about you.</h2>
-  <p>Free audit on any URL. No account. No credit card. Your Legibility Score in 60 seconds.</p>
+  <p>Free score preview on any URL. No account. No credit card.</p>
   <div class="cta-row">
-    <input class="cta-in" id="ctaEmail" type="email" placeholder="your@email.com">
-    <button class="cta-go" onclick="handleCta()">Join waitlist</button>
+    <input class="cta-in" id="ctaUrl" type="url" placeholder="https://yoursite.com">
+    <button class="cta-go" onclick="handleCta()">Preview score</button>
   </div>
 </div>
 
@@ -464,21 +615,68 @@ hello@legible.ai &middot; https://legiblesite.app</div>
   </ul>
 </footer>
 
+<!-- EMAIL GATE -->
+<div class="overlay" id="emailGate" onclick="handleGateClick(event)">
+  <div class="modal" style="max-width:380px">
+    <div id="gContent">
+      <div class="modal-h" style="font-size:22px">Enter your email to see your score</div>
+      <p class="modal-s">We&rsquo;ll email you the full report if you choose to unlock it. No spam, no auto-subscribe.</p>
+      <div id="gError" class="m-error"></div>
+      <input class="m-input" id="gEmail" type="email" placeholder="your@email.com">
+      <button class="m-submit" id="gBtn" onclick="submitGate()">See my Legibility Score &rarr;</button>
+      <button class="m-cancel" onclick="closeGate()">No thanks</button>
+    </div>
+  </div>
+</div>
+
+<!-- UPGRADE MODAL -->
 <div class="overlay" id="overlay" onclick="handleOverlayClick(event)">
   <div class="modal">
     <div id="mContent">
-      <div class="modal-h">See what AI says about you</div>
-      <p class="modal-s">Enter your URL and email &mdash; we&rsquo;ll run your full Legibility Audit and send the report, your score, and a generated llms.txt file.</p>
+      <div class="modal-h" id="mTitle">Get your full report</div>
+      <p class="modal-s" id="mSub">Enter your email and we&rsquo;ll send the full Legibility Report, all issues, the fix list, and your generated llms.txt file.</p>
+      <div class="modal-price-tag" id="mPriceTag">$29 one-time &mdash; no subscription</div>
       <div id="mError" class="m-error"></div>
-      <input class="m-input" id="mUrl" type="url" placeholder="https://yoursite.com">
       <input class="m-input" id="mEmail" type="email" placeholder="your@email.com">
-      <button class="m-submit" id="mBtn" onclick="submitModal()">Get my free audit &rarr;</button>
+      <button class="m-submit" id="mBtn" onclick="submitModal()">Send my report &rarr;</button>
       <button class="m-cancel" onclick="closeModal()">No thanks</button>
     </div>
   </div>
 </div>
 
 <script>
+var _auditData = null;
+var _auditUrl  = null;
+var _upgradeIntent = 'report';
+var _capturedEmail = '';
+
+// ── Email gate ────────────────────────────────────────────
+function openEmailGate() {
+  var url = document.getElementById('heroUrl').value.trim();
+  if (!url) { document.getElementById('heroUrl').focus(); return; }
+  document.getElementById('gError').style.display = 'none';
+  document.getElementById('gBtn').textContent = 'See my Legibility Score →';
+  document.getElementById('gBtn').disabled = false;
+  document.getElementById('gEmail').value = _capturedEmail || '';
+  document.getElementById('emailGate').classList.add('on');
+  setTimeout(function() { document.getElementById('gEmail').focus(); }, 220);
+}
+
+function closeGate() { document.getElementById('emailGate').classList.remove('on'); }
+function handleGateClick(e) { if (e.target === document.getElementById('emailGate')) closeGate(); }
+
+function submitGate() {
+  var email = document.getElementById('gEmail').value.trim();
+  var errEl = document.getElementById('gError');
+  var btn   = document.getElementById('gBtn');
+  errEl.style.display = 'none';
+  if (!email) { document.getElementById('gEmail').focus(); return; }
+  _capturedEmail = email;
+  closeGate();
+  runPreviewAudit();
+}
+
+// ── Score bar demo animation ──────────────────────────────
 var io = new IntersectionObserver(function(entries) {
   entries.forEach(function(e) {
     if (!e.isIntersecting) return;
@@ -493,68 +691,271 @@ var io = new IntersectionObserver(function(entries) {
 }, { threshold: 0.1 });
 document.querySelectorAll('.score-card, .steps').forEach(function(el) { io.observe(el); });
 
-function openModal() {
-  var url = document.getElementById('heroUrl').value;
-  if (url) document.getElementById('mUrl').value = url;
-  document.getElementById('overlay').classList.add('on');
-  document.getElementById('mError').style.display = 'none';
-  setTimeout(function() { document.getElementById('mUrl').focus(); }, 220);
+// ── Grade colour ──────────────────────────────────────────
+function gradeColor(g) {
+  return {A:'#4ade80',B:'#86efac',C:'#f0d060',D:'#f0a050',F:'#f07868'}[g] || '#888';
 }
 
-function closeModal() {
-  document.getElementById('overlay').classList.remove('on');
+// ── Bar fill colour ───────────────────────────────────────
+function barColor(s) {
+  return s >= 70 ? '#4ade80' : s >= 45 ? '#f0d060' : '#f07868';
 }
 
-function handleOverlayClick(e) {
-  if (e.target === document.getElementById('overlay')) closeModal();
+// ── Run the preview audit ─────────────────────────────────
+function runPreviewAudit() {
+  var url = document.getElementById('heroUrl').value.trim();
+  if (!url) {
+    // scroll to and focus the CTA url field if triggered from below
+    var ctaUrl = document.getElementById('ctaUrl').value.trim();
+    if (ctaUrl) url = ctaUrl;
+  }
+  if (!url) { document.getElementById('heroUrl').focus(); return; }
+
+  var btn = document.getElementById('heroBtn');
+  btn.textContent = 'Crawling\u2026';
+  btn.disabled = true;
+
+  _auditUrl = url;
+
+  fetch('/api/audit', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ url: url })
+  })
+  .then(function(r) { return r.json(); })
+  .then(function(data) {
+    btn.textContent = 'See your AI score \u2192';
+    btn.disabled = false;
+    if (data.success) {
+      _auditData = data;
+      showResult(url, data);
+    } else {
+      showError(data.error || 'Audit failed. Please try again.');
+    }
+  })
+  .catch(function() {
+    btn.textContent = 'See your AI score \u2192';
+    btn.disabled = false;
+    showError('Connection error \u2014 please try again.');
+  });
 }
 
+function showError(msg) {
+  var r = document.getElementById('auditResult');
+  r.classList.add('show');
+  r.querySelector('.result-panel').innerHTML = '<div style="padding:32px 24px;font-family:var(--mono);font-size:13px;color:var(--red)">' + msg + '</div>';
+  r.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function showResult(url, data) {
+  var domain = url.replace(/https?:\/\//, '').split('/')[0];
+
+  // header
+  document.getElementById('rDomain').textContent = domain;
+  document.getElementById('rEntity').textContent = data.entity_name || '';
+  var gradeEl = document.getElementById('rGrade');
+  gradeEl.textContent = data.grade;
+  gradeEl.style.color = gradeColor(data.grade);
+  document.getElementById('rScore').textContent = data.score + ' / 100';
+
+  // bars
+  var dims = [
+    ['Entity Clarity',       data.scores.entity_clarity],
+    ['Factual Density',      data.scores.factual_density],
+    ['Internal Consistency', data.scores.internal_consistency],
+    ['Schema Presence',      data.scores.schema_presence],
+    ['Freshness Signals',    data.scores.freshness_signals],
+    ['Claim Verifiability',  data.scores.claim_verifiability]
+  ];
+  var barsHtml = dims.map(function(d) {
+    return '<div class="rbar-row">' +
+      '<span class="rbar-label">' + d[0] + '</span>' +
+      '<div class="rbar-track"><div class="rbar-fill" data-w="' + d[1] + '%" style="background:' + barColor(d[1]) + '"></div></div>' +
+      '<span class="rbar-val">' + d[1] + '</span>' +
+      '</div>';
+  }).join('');
+  document.getElementById('rBars').innerHTML = barsHtml;
+
+  // animate bars
+  setTimeout(function() {
+    document.querySelectorAll('.rbar-fill').forEach(function(b) {
+      b.style.width = b.dataset.w;
+    });
+  }, 80);
+
+  // issues — show first, blur rest
+  var issues = data.issues || [];
+  var issuesHtml = '<div class="issues-head">' + issues.length + ' issue' + (issues.length !== 1 ? 's' : '') + ' found</div>';
+
+  issues.forEach(function(issue, i) {
+    var pip = issue.severity === 'critical' ? 'pip-r' : 'pip-y';
+    var row = '<div class="issue-row"><div class="issue-pip ' + pip + '"></div>' + issue.description + '</div>';
+    if (i === 0) {
+      issuesHtml += row;
+    } else if (i === 1) {
+      issuesHtml += '<div class="issue-locked">' + row +
+        '<div class="issue-locked-overlay"><span>&#128274; unlock full report</span></div>' +
+        '</div>';
+    } else {
+      issuesHtml += '<div class="issue-locked">' + row +
+        '<div class="issue-locked-overlay"><span>&#128274; unlock full report</span></div>' +
+        '</div>';
+    }
+  });
+
+  document.getElementById('rIssues').innerHTML = issuesHtml;
+
+  // show panel, scroll into view
+  var resultEl = document.getElementById('auditResult');
+  resultEl.classList.add('show');
+  setTimeout(function() {
+    resultEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }, 100);
+}
+
+// ── CTA url field shortcut ────────────────────────────────
 function handleCta() {
-  var em = document.getElementById('ctaEmail').value;
-  if (em) document.getElementById('mEmail').value = em;
-  openModal();
+  var url = document.getElementById('ctaUrl').value.trim();
+  if (url) document.getElementById('heroUrl').value = url;
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  setTimeout(openEmailGate, 400);
 }
+
+// ── Modal helpers ─────────────────────────────────────────
+function openUpgrade(intent) {
+  _upgradeIntent = intent;
+  var titles = {
+    report:  'Get your full report',
+    monitor: 'Start weekly monitoring',
+    pro:     'Start Pro plan'
+  };
+  var subs = {
+    report:  'We\u2019ll email you the full Legibility Report, all issues with page-level detail, the fix list, and your generated llms.txt file.',
+    monitor: 'Enter your email to start the Standard plan. We\u2019ll confirm by email and set up weekly citation monitoring for your site.',
+    pro:     'Enter your email to start the Pro plan. We\u2019ll confirm by email and onboard your sites.'
+  };
+  var tags = {
+    report:  '$29 one-time \u2014 no subscription',
+    monitor: '$49/month \u2014 cancel any time',
+    pro:     '$199/month \u2014 cancel any time'
+  };
+  document.getElementById('mTitle').textContent = titles[intent] || titles.report;
+  document.getElementById('mSub').textContent   = subs[intent]   || subs.report;
+  document.getElementById('mPriceTag').textContent = tags[intent] || tags.report;
+  document.getElementById('mError').style.display = 'none';
+  document.getElementById('mBtn').textContent   = 'Send my report \u2192';
+  document.getElementById('mBtn').disabled      = false;
+  document.getElementById('mEmail').value       = '';
+  document.getElementById('overlay').classList.add('on');
+  setTimeout(function() { document.getElementById('mEmail').focus(); }, 220);
+}
+
+function _removedFreeEmail() {
+  _upgradeIntent = 'free';
+  document.getElementById('mTitle').textContent    = 'Get the full report free';
+  document.getElementById('mSub').textContent      = 'Enter your email and we\u2019ll send the complete report, all issues, and your llms.txt file. No card required.';
+  document.getElementById('mPriceTag').textContent = 'Free \u2014 email only';
+  document.getElementById('mError').style.display  = 'none';
+  document.getElementById('mBtn').textContent      = 'Send my report \u2192';
+  document.getElementById('mBtn').disabled         = false;
+  document.getElementById('mEmail').value          = '';
+  document.getElementById('overlay').classList.add('on');
+  setTimeout(function() { document.getElementById('mEmail').focus(); }, 220);
+}
+
+function closeModal() { document.getElementById('overlay').classList.remove('on'); }
+function handleOverlayClick(e) { if (e.target === document.getElementById('overlay')) closeModal(); }
 
 function submitModal() {
-  var url = document.getElementById('mUrl').value.trim();
   var email = document.getElementById('mEmail').value.trim();
   var errEl = document.getElementById('mError');
-  var btn = document.getElementById('mBtn');
-
+  var btn   = document.getElementById('mBtn');
   errEl.style.display = 'none';
-  if (!url) { document.getElementById('mUrl').focus(); return; }
   if (!email) { document.getElementById('mEmail').focus(); return; }
 
-  btn.textContent = 'Crawling your site\u2026';
-  btn.disabled = true;
+  btn.textContent = 'Sending\u2026';
+  btn.disabled    = true;
+
+  var url = _auditUrl || document.getElementById('heroUrl').value.trim();
 
   fetch('/api/audit', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ url: url, email: email })
   })
-  .then(function(res) { return res.json(); })
+  .then(function(r) { return r.json(); })
   .then(function(data) {
-    if (data.success) {
+    if (data.success || data.grade) {
+      var domain = url.replace(/https?:\/\//, '').split('/')[0];
+      var grade  = data.grade || '';
       document.getElementById('mContent').innerHTML =
         '<div class="m-done">' +
-        '<div class="m-tick">' + data.grade + '</div>' +
+        '<div class="m-tick">' + grade + '</div>' +
         '<div class="m-done-h">Report sent.</div>' +
-        '<p class="m-done-p">Your Legibility Score: <strong>' + data.grade + ' &mdash; ' + data.score + '/100</strong><br>Full report landing in your inbox now.</p>' +
+        '<p class="m-done-p">Full report for <strong>' + domain + '</strong><br>landing in your inbox now.</p>' +
         '</div>';
     } else {
-      btn.textContent = 'Get my free audit \u2192';
+      btn.textContent = 'Send my report \u2192';
       btn.disabled = false;
       errEl.textContent = data.error || 'Something went wrong. Please try again.';
       errEl.style.display = 'block';
     }
   })
-  .catch(function(err) {
-    btn.textContent = 'Get my free audit \u2192';
+  .catch(function() {
+    btn.textContent = 'Send my report \u2192';
     btn.disabled = false;
     errEl.textContent = 'Connection error \u2014 please try again.';
     errEl.style.display = 'block';
   });
+}
+
+function goToStripe(email, url, plan) {
+  var btn = document.getElementById('mBtn');
+  if (btn) { btn.textContent = 'Redirecting to payment…'; btn.disabled = true; }
+
+  fetch('/api/create-checkout', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: email, url: url, plan: plan })
+  })
+  .then(function(r){ return r.json(); })
+  .then(function(d){
+    if (d.url) {
+      window.location.href = d.url;
+    } else {
+      if (btn) { btn.textContent = 'Continue to payment →'; btn.disabled = false; }
+      var errEl = document.getElementById('mError');
+      if (errEl) { errEl.textContent = d.error || 'Something went wrong.'; errEl.style.display = 'block'; }
+    }
+  })
+  .catch(function(){
+    if (btn) { btn.textContent = 'Continue to payment →'; btn.disabled = false; }
+    alert('Connection error. Please try again.');
+  });
+}
+
+function openUpgrade(intent) {
+  _upgradeIntent = intent;
+  var email = _capturedEmail || '';
+  var url   = _auditUrl || document.getElementById('heroUrl').value.trim();
+
+  if (email && url) {
+    var plan = intent === 'monitor' ? 'standard' : intent;
+    goToStripe(email, url, plan);
+    return;
+  }
+
+  var labels = { report: 'Get full report — $29', monitor: 'Monitor weekly — $49/month', pro: 'Start Pro — $199/month' };
+  var tags   = { report: '$29 one-time', monitor: '$49/month — cancel any time', pro: '$199/month — cancel any time' };
+  document.getElementById('mTitle').textContent    = labels[intent] || labels.report;
+  document.getElementById('mSub').textContent      = 'Enter your email to continue to secure payment.';
+  document.getElementById('mPriceTag').textContent = tags[intent] || tags.report;
+  document.getElementById('mError').style.display  = 'none';
+  document.getElementById('mBtn').textContent      = 'Continue to payment →';
+  document.getElementById('mBtn').disabled         = false;
+  document.getElementById('mEmail').value          = email;
+  document.getElementById('overlay').classList.add('on');
+  setTimeout(function() { document.getElementById('mEmail').focus(); }, 220);
 }
 
 function toggleFaq(btn) {
